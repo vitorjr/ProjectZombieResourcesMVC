@@ -13,6 +13,10 @@ export class FetchStockResources extends Component {
         this.popularstockResourcesData();
     }
 
+    static handleView(id) {
+        window.location.href = "/stockresources/view/" + id;
+    }
+
     static handleEdit(id) {
         window.location.href = "/stockresources/edit/" + id;
     }
@@ -43,6 +47,7 @@ export class FetchStockResources extends Component {
                             <td>{prod.description}</td>
                             <td>{prod.amount}</td>
                             <td class="text-center">
+                                <button className="btn btn-info" onClick={(id) => this.handleView(prod.id)}>Visualizar</button>&nbsp;
                                 <button className="btn btn-success" onClick={(id) => this.handleEdit(prod.id)}>Editar</button>&nbsp;
                                 <button className="btn btn-danger" onClick={(id) => this.handleDelete(prod.id)}>Deletar</button>
                             </td>

@@ -6,6 +6,7 @@ import { FetchData } from './components/FetchData';
 import { Counter } from './components/Counter';
 import { FetchStockResources } from './components/FetchStockResources';
 import { AddStockResources } from './components/AddStockResources';
+import { ViewStockResources } from './components/ViewStockResources';
 
 import './custom.css'
 
@@ -21,6 +22,7 @@ export default class App extends Component {
             <Route path='/fetch-stockresources' component={FetchStockResources} />
             <Route path='/add-stockresources' component={AddStockResources} />
             <Route path='/stockresources/edit/:id' component={AddStockResources} />
+            <Route path='/stockresources/view/:id' component={ViewStockResources} />
       </Layout>
     );
   }
