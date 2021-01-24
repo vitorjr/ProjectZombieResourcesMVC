@@ -27,9 +27,9 @@ export class AddStockResources extends Component {
         if (id > 0) {
             const response = await fetch('api/StockResources/' + id)
             const data = await response.json();
-            this.setState({ title: "Edit", stockresources: data, loading: false })
+            this.setState({ title: "Editar", stockresources: data, loading: false })
         } else {
-            this.state = { title: "Create", stockresources: new StockResources(), loading: false }
+            this.state = { title: "Criar Novo Recurso", stockresources: new StockResources(), loading: false }
         }
     }
 
@@ -73,16 +73,21 @@ export class AddStockResources extends Component {
                 </div>
                 <div className="form-group row">
                     <div className="col-md-6">
+                        
                         <input className="form-control" type="text" name="description" defaultValue={this.state.stockresources.description} required />
                     </div>
                 </div>
                 <div className="form-group row">
+
                     <div className="col-md-6">
+                        <p><b>Observação:</b></p>
                         <input className="form-control" type="text" name="observation" defaultValue={this.state.stockresources.observation} required />
                     </div>
                 </div>
                 <div className="form-group row">
+                    
                     <div className="col-md-6">
+                        <p><b>Quantidade:</b></p>
                         <input className="form-control" type="number" name="amount" defaultValue={this.state.stockresources.amount} required />
                     </div>
                 </div>
