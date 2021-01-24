@@ -18,7 +18,7 @@ namespace ZombieResources.Models
         [Column("Observation")]
         public string Observation { get; set; }
         [Column("Amount")]
-        public float Amout { get; set; }
+        public float Amount { get; set; }
         [Column("Responsibleinput")]
         public string Responsibleinput { get; set; }
         [Column("Responsibleoutput")]

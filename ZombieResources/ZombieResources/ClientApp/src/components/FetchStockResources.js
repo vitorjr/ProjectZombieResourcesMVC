@@ -33,7 +33,7 @@ export class FetchStockResources extends Component {
                         <th>Código</th>
                         <th>Descrição</th>
                         <th>Quantidade</th>
-                        <th>Ações</th>
+                        <th class="text-center">Ações</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -42,8 +42,8 @@ export class FetchStockResources extends Component {
                             <td>{prod.id}</td>
                             <td>{prod.description}</td>
                             <td>{prod.amount}</td>
-                            <td>
-                                <button className="btn btn-success" onClick={(id) => this.handleEdit(prod.id)}>Editar</button>
+                            <td class="text-center">
+                                <button className="btn btn-success" onClick={(id) => this.handleEdit(prod.id)}>Editar</button>&nbsp;
                                 <button className="btn btn-danger" onClick={(id) => this.handleDelete(prod.id)}>Deletar</button>
                             </td>
 
@@ -63,10 +63,6 @@ export class FetchStockResources extends Component {
             <div>
                 <h1 id="tabelLabel">Recursos</h1>
                 <p>Tela de Listagem de Recursos</p>
-
-                <p>
-                    <Link to="/add-stockresources">Cadastrar Recurso</Link>
-                </p>
                 {contents}
             </div>
             );

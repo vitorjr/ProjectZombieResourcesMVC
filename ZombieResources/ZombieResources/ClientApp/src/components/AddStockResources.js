@@ -52,10 +52,10 @@ export class AddStockResources extends Component {
 
         const data = new FormData(event.target);
 
-        if (this.state.stockresources.id > 0) {
-            const response1 = fetch('api/StockResources' + this.state.stockresources.id, { method: 'PUT', body: data }).then(json => { window.location.href = "fetch-stockresources"; alert("Recurso alterado com sucesso!"))
+        if (this.state.stockresources.id) {
+            const response1 = fetch('api/StockResources/' + this.state.stockresources.id, { method: 'PUT', body: data }).then(json => { window.location.href = "fetch-stockresources"; alert("Recurso alterado com sucesso!") });
         } else {
-            const response2 = fetch('api/StockResources', { method: 'POST', body: data });
+            const response2 = fetch('api/StockResources/', { method: 'POST', body: data });
             this.props.history.push('/fetch-stockresources');
         }
     }

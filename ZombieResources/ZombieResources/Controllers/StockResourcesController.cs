@@ -45,7 +45,7 @@ namespace ZombieResources.Controllers
         // PUT: api/StockResources/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutStockResources(int id, StockResources stockResources)
+        public async Task<IActionResult> PutStockResources(int id, [FromForm]StockResources stockResources)
         {
             if (id != stockResources.Id)
             {
@@ -76,7 +76,7 @@ namespace ZombieResources.Controllers
         // POST: api/StockResources
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<StockResources>> PostStockResources(StockResources stockResources)
+        public async Task<ActionResult<StockResources>> PostStockResources([FromForm]StockResources stockResources)
         {
             _context.StockResources.Add(stockResources);
             await _context.SaveChangesAsync();
