@@ -1,3 +1,18 @@
+# ProjectZombieResourcesDDDReact
+
+Tecnologias Utilizadas:
+
+- MVC
+- ASP.NET Core
+- SQLSever
+- React
+- Javascript
+
+# Executar
+
+Para Executar é necessário ter instalado o SQlSever para obter os dados, e inserir sua connection string no arquivo(appsettings.json)
+
+
 
 # ZOMBIE RESOURCES
 
